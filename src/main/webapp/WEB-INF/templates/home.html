@@ -1,0 +1,23 @@
+<@title>我是home页</@title>
+<@meta name="keywords">home测试，自定义freemarker</@meta>
+<@meta httpEquiv="content-type">utf-8</@meta>
+
+<@nestedStyle>
+     <style>
+<!--
+   我是home部分css
+-->
+</style>
+</@nestedStyle>
+
+<@nestedScript>
+  <script type="text/javascript">
+<!--
+  我是home部分的js 
+//-->
+</script>
+</@nestedScript>
+
+<@layout template="layout/main_layout" preloading=true>
+        <@cache template="common/common" time=60/>
+</@layout>

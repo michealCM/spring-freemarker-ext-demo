@@ -1,0 +1,56 @@
+<@title>我是index页</@title>
+<@meta name="keywords">首页测试，自定义freemarker</@meta>
+<@meta httpEquiv="content-type">utf-8</@meta>
+
+<@nestedStyle>
+     <style>
+<!--
+   我是index部分css
+-->
+</style>
+</@nestedStyle>
+
+<@nestedScript>
+  <script type="text/javascript">
+<!--
+  我是index部分的js
+//-->
+   
+
+</script>
+</@nestedScript>
+
+<@layout template="layout/main_layout" preloading=true>
+      
+      <div style="color:red;">
+            <#if validation_formVo_result??>
+                 ${validation_formVo_result["name"].message}
+            </#if>     
+             <@img src="" lazy_loading=true />
+             <@img src="" lazy_loading=true />
+      </div>
+      
+      <form action="index-p.html" method="post">
+          <input type="text" name="name"/>
+          <input type="submit" value="提交"/>
+     </form>
+     
+     <form action="response.json" method="post">
+          <input type="text" name="name"/>
+          <input type="submit" value="提交"/>
+     </form>
+     
+     <BR/>
+     
+     <img src="asdad"  width="300"  height="300" dir="ltr"/>
+     
+     <BR/>
+     
+     <div style="margin-top: 800px;">
+     <@img src="test.jpg" lazy_loading=true />
+     <@img src="test.jpg" lazy_loading=true />
+     <@img src="test.jpg" lazy_loading=true />
+     <@img src="https://publish-pic-cpu.baidu.com/4a52d29b-c99a-45f8-ac0d-622a6987bafb.jpeg@q_90,w_228,h_152" lazy_loading=true />
+     <@img src="static/images/default_image.png" lazy_loading=true />
+     </div>
+</@layout>

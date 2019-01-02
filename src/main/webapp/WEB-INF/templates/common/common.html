@@ -1,0 +1,24 @@
+
+<@cacheBind key="common/common" time=60>
+
+<@css href="static/css/common.css"/>
+<style>
+<!--
+   我是common部分css
+-->
+</style>
+
+  <script type="text/javascript">
+<!--
+  我是common部分的js
+//-->
+</script>
+
+</@cacheBind>
+
+
+<div>
+   我是home页体内容common：${name}<BR/>
+   <a href="index.html">跳转至indexqq</a><BR/>
+    <a href="${url('home.html')}">跳转至home</a>
+</div>

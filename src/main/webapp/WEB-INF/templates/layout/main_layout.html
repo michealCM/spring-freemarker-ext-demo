@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${htmlHead.title}</title>
+
+<#list htmlHead.htmlMetas as meta>
+    <#if meta.name?? && meta.name?length gt 0>
+         <meta name="${meta.name}" content="${meta.content}" >
+    <#else>
+         <meta http-equiv="${meta.httpEquiv}" content="${meta.content}" >
+    </#if>
+</#list>
+
+<@css href="a,b,c,d"/>
+<@styleBody/>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+			  
+<script type="text/javascript">
+   <#if loadingErrorImage??>
+       var loadingErrorImage = '${loadingErrorImage}';
+   <#else>
+       var loadingErrorImage = '';
+   </#if>
+</script>			  
+			  
+<@js src="1,2,3,4"/>
+<@scriptBody/>
+</head>
+<body>
+<#include "head.html"/>
+<@body />
+<#include "footer.html"/>
+</body>
+<@js src="static/js/scrollshow.js"/>
+</html>
